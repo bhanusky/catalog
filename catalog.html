@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Catalog</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f9f9f9;
+        }
+        h1 {
+            text-align: center;
+        }
+        .category {
+            margin: 20px 0;
+            padding: 10px;
+            background: #fff;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        .category h2 {
+            cursor: pointer;
+        }
+        .products {
+            display: none;
+            margin-top: 10px;
+        }
+        .product {
+            padding: 10px;
+            border: 1px solid #ddd;
+            margin: 5px 0;
+            border-radius: 3px;
+            background: #fff;
+        }
+    </style>
+    <script>
+        function toggleProducts(categoryId) {
+            const products = document.getElementById(categoryId);
+            products.style.display = products.style.display === 'block' ? 'none' : 'block';
+        }
+    </script>
+</head>
+<body>
+
+<h1>Product Catalog</h1>
+
+<div class="category">
+    <h2 onclick="toggleProducts('category1')">Electronics</h2>
+    <div class="products" id="category1">
+        <div class="product">Smartphone</div>
+        <div class="product">Laptop</div>
+        <div class="product">Headphones</div>
+    </div>
+</div>
+
+<div class="category">
+    <h2 onclick="toggleProducts('category2')">Clothing</h2>
+    <div class="products" id="category2">
+        <div class="product">T-Shirt</div>
+        <div class="product">Jeans</div>
+        <div class="product">Jacket</div>
+    </div>
+</div>
+
+<div class="category">
+    <h2 onclick="toggleProducts('category3')">Home Appliances</h2>
+    <div class="products" id="category3">
+        <div class="product">Washing Machine</div>
+        <div class="product">Refrigerator</div>
+        <div class="product">Microwave Oven</div>
+    </div>
+</div>
+
+</body>
+</html>
